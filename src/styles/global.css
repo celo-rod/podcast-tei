@@ -1,5 +1,13 @@
 @import 'tailwindcss';
-@plugin 'daisyui';
+@plugin 'daisyui' {
+  themes: light --default;
+};
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #101010;
+  --color-secondary: #D7561D;
+}
 @import '@fontsource-variable/hepta-slab';
 @import '@fontsource-variable/montserrat';
 @import '@fontsource-variable/syne';
