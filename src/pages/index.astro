@@ -1,8 +1,10 @@
 ---
-import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import HomeContent from '../components/HomeContent.astro';
 ---
 
 <Layout>
-  <Navbar />
+  <Navbar slot="header" />
+  <HomeContent slot="main" />
 </Layout>

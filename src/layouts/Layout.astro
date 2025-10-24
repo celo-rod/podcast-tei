@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -11,7 +11,12 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
   </head>
-  <body class="">
-    <slot />
+  <body>
+    <header>
+      <slot name="header" />
+    </header>
+    <main>
+      <slot name="main" />
+    </main>
   </body>
 </html>
