@@ -1,19 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
 @import 'tailwindcss';
 @plugin 'daisyui' {
   themes: light --default;
-};
-@plugin "daisyui/theme" {
-  name: "light";
+}
+@plugin 'daisyui/theme' {
+  name: 'light';
   default: true;
   --color-primary: #101010;
-  --color-secondary: #D7561D;
+  --color-secondary: #d7561d;
 }
-@import '@fontsource-variable/hepta-slab';
-@import '@fontsource-variable/montserrat';
-@import '@fontsource-variable/syne';
 
 @theme {
-  --font-hepta: Hepta Slab, serif;
-  --font-montserrat: Montserrat, sans-serif;
-  --font-syne: Syne, sans-serif;
+  --font-hepta: 'Hepta Slab', serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-syne: 'Syne', sans-serif;
 }
