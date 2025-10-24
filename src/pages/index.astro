@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
-import HomeContent from '../components/HomeContent.astro';
+import HomeHero from '../components/HomeHero.astro';
 ---
 
 <Layout>
   <Navbar slot="header" />
-  <HomeContent slot="main" />
+  <Fragment slot="main">
+    <HomeHero />
+  </Fragment>
 </Layout>
