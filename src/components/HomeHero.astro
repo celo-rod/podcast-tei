@@ -1,15 +1,16 @@
+---
+import homeHero from '../assets/home-hero.png';
+---
+
 <section id="hero">
   <div class="hero bg-base-100 mt-8 max-h-full w-screen lg:mt-16 lg:px-10">
     <div
-      class="hero-content w-full max-w-full flex-col lg:flex-row-reverse lg:justify-between lg:p-0"
+      class="hero-content w-full max-w-full flex-col gap-12 lg:flex-row-reverse lg:justify-between lg:p-0"
     >
-      <div id="hero-right-side" class="lg:flex lg:w-1/2 lg:items-center lg:justify-end lg:gap-28">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-          class="max-w-sm rounded-lg shadow-2xl"
-        />
+      <div id="hero-right-side" class="lg:flex lg:items-center lg:justify-end lg:gap-28">
+        <img src={homeHero.src} class="max-w-full xl:max-w-lg" />
         <svg
-          class="hidden lg:block"
+          class="hidden xl:block"
           width="9"
           height="115"
           viewBox="0 0 9 115"
@@ -21,7 +22,7 @@
       </div>
       <div id="hero-left-side" class="lg:w-1/2">
         <div id="hero-title-container max-w-2xl">
-          <h1 class="font-hepta text-6xl font-bold md:text-7xl lg:text-7xl">
+          <h1 class="font-hepta text-6xl font-bold md:text-7xl">
             A <span class="text-accent">Raposa</span> tem algo a dizer.
           </h1>
           <svg
