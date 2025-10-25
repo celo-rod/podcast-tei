@@ -7,7 +7,8 @@
   name: 'light';
   default: true;
   --color-primary: #101010;
-  --color-secondary: #d7561d;
+  --color-secondary: #fafbf3;
+  --color-accent: #d7561d;
 }
 
 @theme {
