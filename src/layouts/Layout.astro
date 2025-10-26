@@ -1,4 +1,6 @@
 ---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 ---
 
@@ -13,10 +15,13 @@ import '../styles/global.css';
   </head>
   <body>
     <header>
-      <slot name="header" />
+      <Navbar />
+      <main>
+        <slot />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </header>
-    <main>
-      <slot name="main" />
-    </main>
   </body>
 </html>
