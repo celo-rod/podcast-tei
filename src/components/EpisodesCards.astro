@@ -1,0 +1,110 @@
+---
+import EpisodeCard from './EpisodeCard.astro';
+import episodes from '../data/episodes.json';
+
+const years = [...new Set(episodes.map((ep) => new Date(ep.date).getFullYear()))].sort(
+  (a, b) => b - a,
+);
+---
+
+<section id="cards-section">
+  <div class="bg-base-100 my-20 flex max-h-full w-screen flex-col lg:my-40 lg:px-10">
+    <div id="subtitle-container" class="flex flex-col items-center gap-12">
+      <h2 class="text-accent font-hepta text-center text-5xl font-bold">Produções</h2>
+      <svg
+        width="115"
+        height="9"
+        viewBox="0 0 115 9"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="115" width="9" height="115" rx="4.5" transform="rotate(90 115 0)" fill="#D7561D"
+        ></rect>
+      </svg>
+    </div>
+    <p
+      class="font-montserrat text-primary mx-auto mt-8 max-w-xl px-4 text-center text-lg lg:mt-16 lg:max-w-3xl lg:text-2xl"
+    >
+      Explore as produções em áudio que as turmas do 4o período de Jornalismo na PUC Minas Poços de
+      Caldas realizaram!
+    </p>
+    <!-- <div class="mx-auto mt-8 flex gap-3 lg:mt-16">
+      <details class="dropdown font-montserrat">
+        <summary class="btn btn-soft btn-lg m-1 flex gap-3 rounded-2xl text-xl font-normal">
+          Ano
+          <svg
+            width="20"
+            height="13"
+            viewBox="0 0 20 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.05371 1.05359L9.99389 9.99377L18.9341 1.05359"
+              stroke="#9D9D9D"
+              stroke-width="2.98006"></path>
+          </svg>
+        </summary>
+        <ul
+          id="year-filter"
+          class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 text-xs shadow-sm"
+        >
+          {
+            years.map((year) => (
+              <li>
+                <label class="label">
+                  <input type="checkbox" class="checkbox checkbox-sm checkbox-accent" />
+                  {year}
+                </label>
+              </li>
+            ))
+          }
+          <div class="mt-3 flex w-full gap-2 px-2">
+            <button class="btn btn-accent btn-sm w-1/2 rounded-lg">Aplicar</button>
+            <button class="btn btn-ghost btn-sm w-1/2 rounded-lg">Apagar</button>
+          </div>
+        </ul>
+      </details>
+
+      <details class="dropdown font-montserrat">
+        <summary class="btn btn-soft btn-lg m-1 flex gap-3 rounded-2xl text-xl font-normal">
+          Semestre
+          <svg
+            width="20"
+            height="13"
+            viewBox="0 0 20 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.05371 1.05359L9.99389 9.99377L18.9341 1.05359"
+              stroke="#9D9D9D"
+              stroke-width="2.98006"></path>
+          </svg>
+        </summary>
+        <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 text-xs shadow-sm">
+          <li>
+            <label class="label">
+              <input type="checkbox" class="checkbox checkbox-sm checkbox-accent" />
+              Primeiro
+            </label>
+            <label class="label">
+              <input type="checkbox" class="checkbox checkbox-sm checkbox-accent" />
+              Segundo
+            </label>
+          </li>
+          <div class="mt-3 flex w-full gap-2 px-2">
+            <button class="btn btn-accent btn-sm w-1/2 rounded-lg">Aplicar</button>
+            <button class="btn btn-ghost btn-sm w-1/2 rounded-lg">Apagar</button>
+          </div>
+        </ul>
+      </details>
+    </div> -->
+    <div
+      id="cards-container"
+      class="mt-12 grid grid-cols-1 justify-items-center gap-11 md:grid-cols-2 lg:mt-16 lg:grid-cols-3"
+    >
+      {episodes.map((ep) => <EpisodeCard episode={ep} />)}
+    </div>
+  </div>
+</section>

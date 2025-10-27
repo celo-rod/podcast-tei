@@ -9,6 +9,7 @@
   --color-primary: #101010;
   --color-secondary: #fafbf3;
   --color-accent: #d7561d;
+  --color-accent-content: #ffffff;
 }
 
 @theme {
