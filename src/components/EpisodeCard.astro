@@ -1,0 +1,31 @@
+---
+const { episode } = Astro.props;
+---
+
+<div class="card bg-base-300 w-full max-w-80 rounded-4xl shadow-sm lg:max-w-96">
+  <figure class="h-72">
+    <img src={episode.image} alt=`Capa do episódio ${episode.title}` />
+  </figure>
+  <div
+    class="card-body bg-accent font-montserrat text-secondary relative h-44 justify-center rounded-b-4xl"
+  >
+    <!-- <h3 class="card-title text-lg font-bold">Episódio 1</h3> -->
+    <h3 class="card-title text-2xl font-bold">{episode.title}</h3>
+    <div class="card-actions absolute end-1/12 -top-7">
+      <button class="btn btn-ghost btn-circle size-14"
+        ><svg
+          width="54"
+          height="54"
+          viewBox="0 0 54 54"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="54" height="54" rx="27" fill="#F88653"></rect>
+          <path
+            d="M39.2432 23.5359C41.9099 25.0755 41.9099 28.9245 39.2432 30.4641L23.8784 39.335C21.2117 40.8746 17.8784 38.9501 17.8784 35.8709L17.8784 18.1291C17.8784 15.0499 21.2117 13.1253 23.8784 14.6649L39.2432 23.5359Z"
+            fill="#FAFBF3"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
